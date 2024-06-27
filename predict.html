@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.airline.label }}
+        {{ form.airline }}
+        {% if form.airline.errors %}
+            {% for error in form.airline.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.source_city.label }}
+        {{ form.source_city }}
+        {% if form.source_city.errors %}
+            {% for error in form.source_city.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.departure_time.label }}
+        {{ form.departure_time }}
+        {% if form.departure_time.errors %}
+            {% for error in form.departure_time.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.stops.label }}
+        {{ form.stops }}
+        {% if form.stops.errors %}
+            {% for error in form.stops.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.arrival_time.label }}
+        {{ form.arrival_time }}
+        {% if form.arrival_time.errors %}
+            {% for error in form.arrival_time.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.destination_city.label }}
+        {{ form.destination_city }}
+        {% if form.destination_city.errors %}
+            {% for error in form.destination_city.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.Class.label }}
+        {{ form.Class }}
+        {% if form.Class.errors %}
+            {% for error in form.Class.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.duration.label }}
+        {{ form.duration }}
+        {% if form.duration.errors %}
+            {% for error in form.duration.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.days_left.label }}
+        {{ form.days_left }}
+        {% if form.days_left.errors %}
+            {% for error in form.days_left.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>{{ form.submit() }}</div>
+    <br>
+    <div>{{ output }}</div>
+    <br>
+    <div>
+        <p>Redirect to Homepage? <a href="{{ url_for('home')}}">Home</a> </p>
+
+    </div>
+</form>
+{% endblock content %}        
+
+
+        
+    
+                
